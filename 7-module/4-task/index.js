@@ -17,7 +17,7 @@ export default class StepSlider {
         sliderSteps.className = 'slider__steps';
         for (let i = 0; i < steps; i++) {
            let span = sliderSteps.appendChild(document.createElement('span'));
-           
+           span.value = i;
           };
          
         sliderSteps.firstChild.classList.add('slider__step-active');
@@ -70,6 +70,7 @@ export default class StepSlider {
           bubbles: true
         });
         slider.dispatchEvent(sliderEvent);
+        
 
        });
 
@@ -86,7 +87,6 @@ export default class StepSlider {
          if (leftrel > 1) {
            leftrel = 1;
          }
-         
          
          slThumb.style.left = leftrel * 100 + '%';
          slProgress.style.width = leftrel * 100 + '%'; 
