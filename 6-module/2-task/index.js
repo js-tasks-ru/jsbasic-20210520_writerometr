@@ -10,7 +10,7 @@ holdr.id="holder";*/
    let crd = (document.createElement('div'));
    crd.className="card";
    this.elem = crd;
-   this.image = product.image;
+   this.image = '/assets/images/products/' + product.image;
    this.price = '€' + product.price.toFixed(2);
    this.category = product.category;
    this.name = product.name;
@@ -26,7 +26,7 @@ holdr.id="holder";*/
      let img = top.appendChild(document.createElement('img'));
      img.className ='card__image';
      img.alt ="product";
-     img.src = "/assets/images/products/" + this.image;
+     img.src = this.image;
     
   /*Раздел цены*/
   let spn = top.appendChild(document.createElement('span'));
