@@ -23,7 +23,6 @@ export default class ProductGrid {
   
   updateFilter(filters) {
     this.filters = Object.assign(this.filters, filters);
-   console.log(this.filters);
 
     let result = this.products;
 

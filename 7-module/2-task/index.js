@@ -54,8 +54,12 @@ this.mdlBody.append(modalBody);
     }
     
   close() {
+    let modal = document.querySelector('.modal');
+    if (modal){
+    modal.remove();  
+    }
     document.body.classList.remove('is-modal-open');
-    this.node.remove();
+    
   }
 }
 
