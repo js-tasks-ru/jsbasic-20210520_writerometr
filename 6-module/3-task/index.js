@@ -3,7 +3,7 @@ import createElement from '../../assets/lib/create-element.js';
 export default class Carousel {
   constructor(slides) {
     let body = document.querySelector('body');
-    let fullCarousel = body.appendChild(document.createElement('div'));
+    let fullCarousel = document.createElement('div');
     fullCarousel.className = "carousel";
     let crsInner = fullCarousel.appendChild(document.createElement('div'));
     crsInner.className= "carousel__inner";
