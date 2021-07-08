@@ -20,8 +20,10 @@ export default class StepSlider {
            span.value = i;
           };
          
-        sliderSteps.firstChild.classList.add('slider__step-active');
-    
+        sliderSteps.children[value].classList.add('slider__step-active');
+        document.querySelector('.slider__thumb').style.left = value / (steps - 1) * 100 + '%';
+        document.querySelector('.slider__progress').style.width = value / (steps - 1) * 100 + '%';
+        
        slider.addEventListener('click', changingClick);
        function changingClick (event){
          let leftRel = (event.clientX - slider.getBoundingClientRect().left) / slider.offsetWidth;
@@ -29,7 +31,6 @@ export default class StepSlider {
          sliderValue.textContent = slider.value;
          let valuePers = slider.value / (steps - 1) * 100;
          this.value = slider.value;
-
          let sliderEvent =  new CustomEvent('slider-change', {
           detail: this.value,
           bubbles: true

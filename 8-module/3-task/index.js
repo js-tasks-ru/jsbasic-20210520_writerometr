@@ -20,7 +20,6 @@ export default class Cart {
 		} else {
 			exist.count++;
 		}
-    console.log('this.cartItems=',this.cartItems)
 
 		this.onProductUpdate(newItem);
   }
